@@ -14,5 +14,4 @@
 ---
 include:
   - board: corneish_zen_v2_left
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: corneish_zen_v2_right

@@ -45,27 +45,27 @@
         compatible = "zmk,combos";
        esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
         };
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <32 33>;
+            key-positions = <31 32>;
         };
 
         ctrl {
             bindings = <&kp RCTRL>;
-            key-positions = <2 3>;
+            key-positions = <1 2>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <13 14 15>;
+            key-positions = <12 13 14>;
         };
 
         alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <20 21>;
+            key-positions = <19 20>;
         };
     };
 };

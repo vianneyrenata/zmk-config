@@ -40,35 +40,6 @@
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-       esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-        };
-
-        enter {
-            bindings = <&kp ENTER>;
-            key-positions = <32 33>;
-        };
-
-        ctrl {
-            bindings = <&kp RCTRL>;
-            key-positions = <2 3>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <13 14 15>;
-        };
-
-        alt {
-            bindings = <&kp LEFT_ALT>;
-            key-positions = <20 21>;
-        };
-    };
-};
 
 /* Homerow mods */
 

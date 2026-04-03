@@ -223,12 +223,12 @@ ZMK_BASE_LAYER(Bth,
                         &trans  &trans  &trans ,   &trans        &trans        &trans
 )
 
-ZMK_BASE_LAYER(Mouse,
-&trans  &trans  &trans  &trans  &trans  ,  &trans  &trans          &mkp MCLK       &kp LC(MINUS)    &kp LC(EQUAL)   ,   
-&trans  &trans  &trans  &trans  &trans  ,  &trans  &mkp LCLK       U_MS_U    &mkp RCLK        U_WH_U  ,
-&trans  &trans  &trans  &trans  &trans  ,  &trans  U_MS_L  U_MS_D  U_MS_R  U_WH_D  ,
-                        &trans  &trans  &trans  ,  &trans  &trans          &trans
-)
+//ZMK_BASE_LAYER(Mouse,
+//&trans  &trans  &trans  &trans  &trans  ,  &trans  &trans          &mkp MCLK       &kp LC(MINUS)    &kp LC(EQUAL)   ,   
+//&trans  &trans  &trans  &trans  &trans  ,  &trans  &mkp LCLK       U_MS_U    &mkp RCLK        U_WH_U  ,
+//&trans  &trans  &trans  &trans  &trans  ,  &trans  U_MS_L  U_MS_D  U_MS_R  U_WH_D  ,
+//                        &trans  &trans  &trans  ,  &trans  &trans          &trans
+//)
 
 
 /* vim: set ft=c tw=146: */

@@ -55,7 +55,7 @@
         };
 
         ctrl {
-            bindings = <&kp RCTRL>;
+            bindings = <&sk RCTRL>;
             key-positions = <1 2>;
             layers = <0 1 2>;
         };

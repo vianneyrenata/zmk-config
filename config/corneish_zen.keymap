@@ -1,24 +1,24 @@
 #define CONFIG_WIRELESS
 
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
-    ZMK_LAYER(                                                                 \
-        name,                                                                  \
-                 LT RT                                                         \
-                 LM RM                                                         \
-                 LB RB                                                         \
-        &kp LGUI LH RH &smart_mouse                                            \
-    )
+// #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                   \
+//    ZMK_LAYER(                                                                 \
+//        name,                                                                  \
+//                 LT RT                                                         \
+//                 LM RM                                                         \
+//                 LB RB                                                         \
+//        &kp LGUI LH RH &smart_mouse                                            \
+////    )
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include "zmk-helpers/key-labels/36.h"
 // #include "base.keymap"
+#include "mouse.dtsi"
 
 / {
-    chosen { zmk,physical-layout = &foostan_corne_5col_layout; };
-
     combos {
         compatible = "zmk,combos";
 
@@ -97,3 +97,5 @@
         };
     };
 };
+
+/{ chosen { zmk,physical-layout = &foostan_corne_5col_layout; }; };

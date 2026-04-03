@@ -214,7 +214,7 @@ ZMK_BASE_LAYER(Nav,
 ZMK_BASE_LAYER(Fn,
 &kp GRAVE  &kp F12  &kp F7  &kp F8  &kp F9  ,  &kp LC(A)     &kp LC(C)     &kp LC(V)  &kp HOME   &kp PG_UP ,
 &trans     &kp F11  &kp F4  &kp F5  &kp F6  ,  &kp C_VOL_DN  &kp C_VOL_UP  &kp UP     &kp END    &kp PG_DN ,
-&trans     &kp F10  &kp F1  &kp F2  &kp F3  ,  &kp CAPS      &kp LEFT      &kp DOWN   &kp RIGHT  &kp ,
+&trans     &kp F10  &kp F1  &kp F2  &kp F3  ,  &kp CAPS      &kp LEFT      &kp DOWN   &kp RIGHT  &kp DEL,
                             &trans  &trans  &trans  ,  &trans        &trans        &trans
 )
 

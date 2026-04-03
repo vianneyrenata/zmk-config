@@ -50,7 +50,7 @@
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <31 32>;
+            key-positions = <27 28>;
         };
 
         ctrl {
@@ -60,12 +60,12 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <12 13 14>;
+            key-positions = <10 11 12>;
         };
 
         alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <19 20>;
+            key-positions = <17 18>;
         };
     };
 };

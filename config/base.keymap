@@ -13,10 +13,11 @@
 #endif
 
 #define DEF 0
-#define NUM 1
-#define NAV 2
-#define BTH 3
-#define MOUSE 4
+#define NAV 1
+#define FN 2
+#define NUM 3
+#define SYS 4
+#define MOUSE 5
 
 #define XXX &none
 #define ___ &trans
@@ -56,7 +57,7 @@
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
+// ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
@@ -70,32 +71,43 @@ ZMK_BASE_LAYER(Base,
                       &kp LGUI  &kp SPACE  &mo 1 ,   &mo 2  &kp RIGHT_SHIFT  &tog 4
 )
 
-ZMK_BASE_LAYER(Number,
+ZMK_BASE_LAYER(Nav,
 &kp Q  &kp W   &kp N7  &kp N8  &kp N9  ,  &kp LS(LPAR)  &kp LS(RPAR)  &kp MINUS        &kp EQUAL     &kp BSLH ,
 &kp A  &kp N4  &kp N4  &kp N5  &kp N6  ,  &kp LBKT      &kp RBKT      &kp LS(UNDER)    &kp LS(PLUS)  &kp SEMI , 
 &kp Z  &kp N0  &kp N1  &kp N2  &kp N3  ,  &kp LS(LBRC)  &kp LS(RBRC)  &trans           &trans        &kp FSLH  ,
                        &trans  &trans  &trans    &mo 3    ,     &kp LSHFT     &kp PRINTSCREEN
 )
 
-ZMK_BASE_LAYER(Navi,
+ZMK_BASE_LAYER(Fn,
 &kp GRAVE  &kp F12  &kp F7  &kp F8  &kp F9  ,  &kp LC(A)     &kp LC(C)     &kp LC(V)  &kp HOME   &kp PG_UP ,
 &trans     &kp F11  &kp F4  &kp F5  &kp F6  ,  &kp C_VOL_DN  &kp C_VOL_UP  &kp UP     &kp END    &kp PG_DN ,
 &trans     &kp F10  &kp F1  &kp F2  &kp F3  ,  &kp CAPS      &kp LEFT      &kp DOWN   &kp RIGHT  &kp DEL,
                             &trans  &trans  &trans  ,  &trans        &trans        &trans
 )
 
-ZMK_BASE_LAYER(Bth,
+ZMK_BASE_LAYER(Num,
 &trans  &trans  &trans  &trans  &trans  ,  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR  ,
 &trans  &trans  &trans  &trans  &trans  ,  &trans        &trans        &trans        &trans        &trans      ,
 &trans  &trans  &trans  &trans  &trans  ,  &trans        &trans        &trans        &trans        &trans     ,
                         &trans  &trans  &trans ,   &trans        &trans        &trans
 )
 
-ZMK_BASE_LAYER(Mouse,
+ZMK_BASE_LAYER(Sys,
 &trans  &trans  &trans  &trans  &trans  ,  &trans  &trans          &mkp MCLK       &kp LC(MINUS)    &kp LC(EQUAL)   ,   
 &trans  &trans  &trans  &trans  &trans  ,  &trans  &mkp LCLK       U_MS_U    &mkp RCLK        U_WH_U  ,
 &trans  &trans  &trans  &trans  &trans  ,  &trans  U_MS_L  U_MS_D  U_MS_R  U_WH_D  ,
                         &trans  &trans  &trans  ,  &trans  &trans          &trans
 )
 
+ZMK_BASE_LAYER(Mouse,
+//╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+    ___           ___           ___           ___           ___         ,   ___           &kp PG_UP     U_MS_U         &kp PG_DN    ___         ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___         ,   U_WH_L        U_MS_L        U_MS_D         U_MS_R       U_WH_R      ,
+//├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+    ___           ___           ___           ___           ___         ,   ___           &mkp LCLK     &mkp MCLK      &mkp RCLK    ___         ,
+//╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
+                                              ___           ___         ,   U_WH_U        U_WH_D
+//                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
+)
 /* vim: set ft=c tw=146: */
